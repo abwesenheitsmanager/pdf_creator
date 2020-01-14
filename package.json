@@ -1,0 +1,36 @@
+{
+  "name": "pdf_creator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "build": "npx shx rm -rf build && npx babel src/ -d build/",
+    "start": "cd build && node app.js",
+    "dev": "npx cross-env NODE_ENV=development npx nodemon --watch src --exec 'npm start'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abwesenheitsmanager/pdf_creator.git"
+  },
+  "author": "Benjamin Bulis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/abwesenheitsmanager/pdf_creator/issues"
+  },
+  "homepage": "https://github.com/abwesenheitsmanager/pdf_creator#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "pdffiller": "0.0.11"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.3",
+    "@babel/core": "^7.8.3",
+    "@babel/node": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "cross-env": "^6.0.3",
+    "nodemon": "^2.0.2",
+    "shx": "^0.3.2"
+  }
+}
